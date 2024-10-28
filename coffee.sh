@@ -3,7 +3,9 @@
 # 'xprintidle' for inactivity check (in ms)
 # 'xdotool' to move the mouse pointer or send a key
 #
-artfile="coffee.ascii"
+scriptpath="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+artfile="$scriptpath/coffee.ascii"     
+
 if [ -e "$artfile" ]; then
 	cat $artfile
 fi
