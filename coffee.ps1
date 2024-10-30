@@ -9,8 +9,13 @@
 #
 # Future enhancements - use events rather than an infinite loop
 $scriptFolder = $PSScriptRoot
+$artFile = 'coffee.ascii'
 
-(Get-Content -Encoding UTF8 -Path $scriptFolder\coffee.ascii -Raw)
+clear
+(Get-Content -Encoding UTF8 -Path $scriptFolder\$artFile -Raw)
+
+Write-Output 'Taking a coffee break'
+Write-Output 'Press ctrl+c to start working again...'
 
 $wsh = New-Object -ComObject WScript.Shell
 while (1) {
